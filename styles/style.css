@@ -101,6 +101,7 @@ ol {
 }
 
 .search-form__fieldset-title {
+  font-family: inherit;
   font-weight: 400;
   font-size: 18px;
 }
@@ -112,6 +113,8 @@ ol {
   column-gap: 5px;
   cursor: pointer;
   width: fit-content;
+  /* font-family: inherit; */
+  font-size: inherit;
 }
 
 .search-form__label:hover {
@@ -133,6 +136,7 @@ ol {
   border-left: none;
   padding: 2px 0;
   background-color: transparent;
+  color: var(--main-text-color);
 }
 
 .search-form__textfield::placeholder {
@@ -145,10 +149,8 @@ ol {
 }
 
 .search-form__textfield:focus,
-.search-form__textfield:focus-visible,
-.content__card-link:focus,
-.button:focus {
-  outline: none;
+.search-form__textfield:focus-visible {
+  outline: 1px solid var(--outline-color);
 }
 
 .search-form__checkbox-list {
@@ -195,7 +197,6 @@ ol {
 .content__details {
   display: flex;
   flex-direction: column;
-  width: 100%;
 }
 
 .title {
@@ -215,10 +216,13 @@ ol {
 .content__list {
   display: flex;
   flex-direction: column;
-  row-gap: 30px;
   position: relative;
   height: 298px;
   overflow-y: scroll;
+}
+
+.content__list-item:not(:last-child) {
+  margin: 0 0 30px;
 }
 
 .content__card-link {
@@ -247,6 +251,7 @@ ol {
   font-size: 30px;
   line-height: 100%;
   text-transform: uppercase;
+  text-overflow: hidden;
 }
 
 .content__video-card-description {
