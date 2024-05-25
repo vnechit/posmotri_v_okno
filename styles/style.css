@@ -137,6 +137,7 @@ ol {
   padding: 2px 0;
   background-color: transparent;
   color: var(--main-text-color);
+  font-family: "Fira Sans Condensed", sans-serif;
 }
 
 .search-form__textfield::placeholder {
@@ -219,6 +220,7 @@ ol {
   position: relative;
   height: 298px;
   overflow-y: scroll;
+  min-width: 390px;
 }
 
 .content__list-item:not(:last-child) {
@@ -251,7 +253,10 @@ ol {
   font-size: 30px;
   line-height: 100%;
   text-transform: uppercase;
-  text-overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  max-width: 200px;
 }
 
 .content__video-card-description {
